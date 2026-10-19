@@ -2,6 +2,8 @@
 
 Portage en Rust du **Bloc-notes de ReactOS** (`base/applications/notepad`, fichiers `main.c` / `printing.c`) vers le crate [`windows` 0.62.2](https://crates.io/crates/windows/0.62.2). Le projet est développé sous Linux, **cross-compilé** vers `x86_64-pc-windows-gnu` et testé fonctionnellement sous **Wine**.
 
+![Le portage Rust du Bloc-notes en action sous Wine](image/Capture%20d'écran_20261019_212835.png)
+
 ## Structure du dépôt
 
 | Dossier | Contenu |
