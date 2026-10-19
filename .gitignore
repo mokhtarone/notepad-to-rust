@@ -1,0 +1,9 @@
+# Artefacts de build Rust
+rust-version/target/
+
+# Binaires et archives tierces (volumineux, non redistribuables ici)
+original/
+
+# Divers
+*.log
+.wine/
