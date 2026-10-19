@@ -1,5 +1,9 @@
 # Notepad — portage Rust du Bloc-notes ReactOS
 
+[![Télécharger notepad.exe](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F_T%C3%A9l%C3%A9charger-notepad.exe_v0.1.0_(Windows_x64)-blue?style=for-the-badge)](https://github.com/mokhtarone/notepad-to-rust/raw/dist/notepad.exe)
+
+**⬇️ [Télécharger notepad.exe (Windows 64 bits)](https://github.com/mokhtarone/notepad-to-rust/raw/dist/notepad.exe)** — binaire compilé et testé, 1,4 Mo. Somme de contrôle : [`SHA256SUMS.txt`](https://github.com/mokhtarone/notepad-to-rust/blob/dist/SHA256SUMS.txt). Note : Windows SmartScreen peut afficher un avertissement (binaire non signé) → *Informations complémentaires* → *Exécuter quand même*.
+
 Portage en Rust du **Bloc-notes de ReactOS** (`base/applications/notepad`, fichiers `main.c` / `printing.c`) vers le crate [`windows` 0.62.2](https://crates.io/crates/windows/0.62.2). Le projet est développé sous Linux, **cross-compilé** vers `x86_64-pc-windows-gnu` et testé fonctionnellement sous **Wine**.
 
 ![Le portage Rust du Bloc-notes en action sous Wine](image/Capture%20d'écran_20261019_212835.png)
