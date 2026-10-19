@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-gnu
+
+      - name: Install MinGW-w64 cross toolchain
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends gcc-mingw-w64-x86-64
+
+      - name: Build (release)
+        working-directory: rust-version
+        run: cargo build --release --target x86_64-pc-windows-gnu
+
+      - name: Publish release with exe
+        uses: softprops/action-gh-release@v2
+        with:
+          files: rust-version/target/x86_64-pc-windows-gnu/release/notepad.exe
+          generate_release_notes: true
+          fail_on_unmatched_files: true
