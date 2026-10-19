@@ -7,3 +7,4 @@ original/
 # Divers
 *.log
 .wine/
+/notepad.exe
