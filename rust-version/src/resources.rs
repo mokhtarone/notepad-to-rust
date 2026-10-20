@@ -14,7 +14,7 @@ use windows::Win32::UI::WindowsAndMessaging::{
 };
 use windows::Win32::UI::Input::KeyboardAndMouse::{VK_F3, VK_F5};
 
-const NOTEPAD_ICO: &[u8] = include_bytes!("../../original/notepad.ico");
+const NOTEPAD_ICO: &[u8] = include_bytes!("../assets/notepad.ico");
 
 fn last_error() -> windows::core::Error {
     // SAFETY: GetLastError only reads the thread's last error code.
